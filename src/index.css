@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+  --bg: #07111f;
+  --bg-soft: #0a1727;
+  --surface: #0d1b2a;
+  --surface-light: #11263a;
+
+  --text: #f4f7fa;
+  --text-muted: #91a4b8;
+  --text-dim: #63778c;
+
+  --accent: #4da3ff;
+  --accent-soft: rgba(77, 163, 255, 0.12);
+  --accent-border: rgba(77, 163, 255, 0.28);
+
+  --highlight: #d9f0ff;
+
+  --border: rgba(210, 230, 248, 0.09);
+  --border-light: rgba(210, 230, 248, 0.15);
+
+  --container: 1180px;
+
+  --font-body: 'DM Sans', sans-serif;
+  --font-heading: 'Manrope', sans-serif;
+
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+
+  background:
+    radial-gradient(
+      circle at 78% 8%,
+      rgba(77, 163, 255, 0.08),
+      transparent 28rem
+    ),
+    radial-gradient(
+      circle at 15% 45%,
+      rgba(77, 163, 255, 0.035),
+      transparent 24rem
+    ),
+    var(--bg);
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--font-body);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--accent);
+  color: #08090c;
+}
+
+.container {
+  width: min(var(--container), calc(100% - 48px));
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: min(var(--container), calc(100% - 32px));
+  }
+}
